@@ -38,7 +38,6 @@
 // 	greet()
 // }
 
-
 // package main
 
 // import "fmt"
@@ -78,12 +77,12 @@
 // func main(){
 
 // 	sum, difference := calculate(20,5)
-	
+
 // 	fmt.Println("sum",sum)
 // 	fmt.Println("difference",difference)
 // }
 
-// package main 
+// package main
 // import "fmt"
 
 // func calculate(a int , b int) (int, int){
@@ -125,21 +124,19 @@
 // 	fmt.Println(numbers)
 // }
 
-
 // package main
 // import "fmt"
 
 // func main(){
 // 	numbers := []int{1,3,7,9,11}
 
-
 // 	for index,number := range numbers {
 // 		fmt.Println(index,number)
 // 	}
-	
+
 // }
 
-// 
+//
 
 // package main
 // import "fmt"
@@ -152,7 +149,6 @@
 
 // 	fmt.Println(patients)
 // }
-
 
 // package main
 // import "fmt"
@@ -168,11 +164,55 @@
 // 	}
 // }
 
-package main 
+// package main
+// import "fmt"
+
+// type Patient struct {
+// 	Id int
+// 	Name string
+// 	Age int
+// 	Email string
+// }
+
+// func main(){
+// 	patient := Patient{
+// 		Id: 1,
+// 		Name: "Hashim",
+// 		Age: 25,
+// 		Email: "mohammedhashim530@gmail.com",
+// 	}
+
+// 	fmt.Println(patient)
+// }
+
+package main
+
 import "fmt"
 
-type patient struct {
-	Id int,
+type Patient struct{
+	Id int
 	Name string
-	S
+	Specialization string
+	Experience string
+}
+
+func main(){
+	patients:= []Patient{
+	{
+		Id :1,
+		Name : "Hashim",
+		Specialization: "doctor",
+		Experience: "5 years",
+	},
+	{
+		Id :2,
+		Name : "rahul",
+		Specialization: "doctor pro",
+		Experience: "6 years",
+	},
+	}
+
+	for _, patient := range patients {
+		fmt.Println(patient.Id, patient.Name, patient.Specialization, patient.Experience)
+	}
 }
